@@ -1,9 +1,68 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>호그와트 분류모자</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <!-- 기존 CSS(아래에 있을수록 우선순위가 높음) -->
         <link rel="stylesheet" href="style.css" />
+        <!-- harry potter font -->
+        <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+        <style>@import url('http://fonts.cdnfonts.com/css/harry-potter');</style>
+                
     </head>
     <body>
+        
+        <!-- navbar start-->
+        <nav class="navbar navbar-expand-lg navbar-light nav-distance">
+          <div class="container-fluid">
+            <a class="navbar-brand text-muted" href="#">기숙사 테스트</a>
+            <button class="navbar-toggler bg-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active text-muted" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-muted" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <!-- navbar end -->
+        <!-- section start-->
+        <section class="section">
+            <h1 class="title">호그와트 기숙사 분류 테스트</h1>
+            <h2 class="subtitle">Hogwarts Sorting Hat</h2>
+            <img src="image/sortinghat.png" class="img-sortinghat">
+        </section>
+        <!-- section end-->
         <div>Teachable Machine Image Model</div>
         <button type="button" onclick="init()">1. Start</button>
         
@@ -14,14 +73,6 @@
             src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"
         ></script>
         <div class="file-upload">
-            <button
-                class="file-upload-btn"
-                type="button"
-                onclick="$('.file-upload-input').trigger( 'click' )"
-            >
-                Add Image
-            </button>
-
             <div class="image-upload-wrap">
                 <input
                     class="file-upload-input"
@@ -30,15 +81,17 @@
                     accept="image/*"
                 />
                 <div class="drag-text">
-                    <h3>Drag and drop a file or select add Image</h3>
+                    <span class="upload-emoji">📤</span>
+                    <h3>클릭하여 사진 파일을 첨부하세요.<br>Drag and drop a file or select add Image</h3>
                 </div>
             </div>
             <div class="file-upload-content">
-                <!-- 아이디추가 -->
+                <!-- face-image 아이디추가 -->
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" /> 
                 <div class="image-title-wrap">
                     <button type="button" onclick="removeUpload()" class="remove-image">
-                        Remove <span class="image-title">Uploaded Image</span>
+                         <!-- <span class="image-title">Uploaded Image</span>-->
+                        파일삭제<br>REMOVE FILE
                     </button>
                 </div>
             </div>
@@ -141,6 +194,11 @@
                 $('.image-upload-wrap').removeClass('image-dropping');
             });
         </script>
+        
+        
+        <!-- JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
     </body>
 
     <!-- Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
