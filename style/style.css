@@ -57,6 +57,11 @@ body {
     font-size: 5rem;
 }
 
+.img-sortinghat{
+    width: 150px;
+}
+
+
 @media screen and (max-width: 600px) {
   html {
     font-size: 10px;
@@ -149,8 +154,7 @@ body {
 }
 
 .file-upload-image {
-  max-height: 200px;
-  max-width: 200px;
+  max-width: 70%;
   margin: auto;
   padding: 20px;
 }
@@ -184,4 +188,11 @@ body {
 
 .result-msg {
     font-size: 1.5rem;
+}
+
+.chart-container{
+    position: relative;
+    margin: auto;
+    height: 50vh;
+    width: 50vw;
 }

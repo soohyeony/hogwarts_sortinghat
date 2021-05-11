@@ -29,25 +29,6 @@
                 <li class="nav-item">
                   <a class="nav-link text-muted" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle text-muted" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-              <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-              </form>
             </div>
           </div>
         </nav>
@@ -73,14 +54,19 @@
                 />
                 <div class="drag-text">
                     <span class="upload-emoji">📤</span>
-                    <h3>클릭하여 사진 파일을 첨부하세요.<br>Drag and drop a file or select add Image</h3>
+                    <h3>클릭하여 사진 파일을 첨부하세요.<br>Please select and upload image file.</h3>
                 </div>
             </div>
             <div class="file-upload-content">
-                <!-- face-image 아이디추가 -->
+                <!-- 업로드된 이미지 -->
                 <img class="file-upload-image" id="face-image" src="#" alt="your image" />
+                <!-- 결과메세지 -->
                 <p class="result-msg"></p>
-                <div id="label-container"></div>
+                <!-- 예측 결과 -->
+                <!-- <div id="label-container"></div> -->
+                <!-- 차트 -->
+                <div class="chart-container"><canvas id="myChart"></canvas></div>
+
                 <div class="image-title-wrap mt-3">
                     <button type="button" onclick="removeUpload()" class="remove-image">
                          <!-- <span class="image-title">Uploaded Image</span>-->
@@ -99,6 +85,8 @@
         <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
         <!-- JS IMPORT: BOOTSTRAP -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+        <!-- JS IMPORT: CHART.JS -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     </body>
 

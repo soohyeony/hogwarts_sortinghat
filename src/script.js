@@ -23,7 +23,10 @@ function readURL(input) {
             .then(() => {
                 // console.log("init completed");
                 predict();
+                
             });
+        loadingMsg = "모자는 고민에 빠졌습니다..잠시만 기다려주세요."
+        $('.result-msg').html(loadingMsg);
     } else {
         removeUpload();
     }
@@ -72,11 +75,13 @@ async function init() {
 
     // append elements to the DOM
     // document.getElementById('webcam-container').appendChild(webcam.canvas);
-    labelContainer = document.getElementById('label-container');
-    for (let i = 0; i < maxPredictions; i++) {
-        // and class labels
-        labelContainer.appendChild(document.createElement('div'));
-    }
+    
+    // 결과값 반복해서 넣기
+    // labelContainer = document.getElementById('label-container');
+    // for (let i = 0; i < maxPredictions; i++) {
+    //     // and class labels
+    //     labelContainer.appendChild(document.createElement('div'));
+    // }
 }
 
 // async function loop() {
@@ -120,10 +125,89 @@ async function predict() {
     //jquery를 이용하여 결과메세지 넣기
     $('.result-msg').html(resultMsg);
 
-    for (let i = 0; i < maxPredictions; i++) {
-        const classPrediction =
-            prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
-        labelContainer.childNodes[i].innerHTML = classPrediction;
+    // labelContainer에 결과값 넣기
+    // for (let i = 0; i < maxPredictions; i++) {
+    //     const classPrediction =
+    //         prediction[i].className + ': ' + prediction[i].probability.toFixed(2);
+    //     labelContainer.childNodes[i].innerHTML = classPrediction;
+    // }
+    
+    // CHART.JS
+    // 차트 데이터 설정
+    const data = {
+      labels: [
+          prediction[0].className,
+          prediction[1].className,
+          prediction[2].className,
+          prediction[3].className
+      ],
+      datasets: [{
+        label: 'RESULT',
+        data: [          
+          prediction[0].probability.toFixed(2)*100,
+          prediction[1].probability.toFixed(2)*100,
+          prediction[2].probability.toFixed(2)*100,
+          prediction[3].probability.toFixed(2)*100],
+        backgroundColor: [
+            "rgba(156,18,3,0.4)",
+            "rgba(227,160,0,0.4)",
+            "rgba(3,56,7,0.4)",
+            "rgba(0,22,94,0.4)"
+        ],
+        borderColor: [
+            "rgba(156,18,3,1)",
+            "rgba(227,160,0,1)",
+            "rgba(3,56,7,1)",
+            "rgba(0,22,94,1)"
+        ],
+        borderWidth: 2,
+        hoverBackgroudColor: [
+            "rgba(156,18,3,0.6)",
+            "rgba(227,160,0,0.6)",
+            "rgba(3,56,7,0.6)",
+            "rgba(0,22,94,0.6)"
+        ],
+        hoverBorderColor: [
+            "rgba(156,18,3,1)",
+            "rgba(227,160,0,1)",
+            "rgba(3,56,7,1)",
+            "rgba(0,22,94,1)"
+        ],
+        hoverOffset: 0,
+      }]
+    };    
+    
+    // 차트 타입 설정
+    const config = {
+      type: 'doughnut',
+      data: data,
+    };
+    
+    const options = { 
+        responsive: true, 
+        legend: false, 
+        maintainAspectRatio : false, 
+        animation: false, 
+        pieceLabel: { mode:"label", position:"outside", fontSize: 11, fontStyle: 'bold' },
+        plugins: {
+            labels: {
+                render: function (options) {
+                    var value = options.value;
+                    return value + "%";
+                }
+            }
+        }
     }
-    // console.log(prediction);
+                
+    
+    Chart.defaults.font.family = 'DungGeunMo';
+    Chart.defaults.font.size = 14;
+    Chart.defaults.plugins.legend.position = 'left';
+    
+    // 차트그리기
+    var myChart = new Chart(
+        document.getElementById('myChart'),
+        config,
+        options
+    );
 }
