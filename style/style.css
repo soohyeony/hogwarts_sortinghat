@@ -36,9 +36,11 @@ body {
 }
 
 .section {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     color: whitesmoke;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .title {
@@ -51,14 +53,11 @@ body {
 
 .img-sortinghat {
     filter: invert(80%);
+    width: 150px;
 }
 
 .upload-emoji {
     font-size: 5rem;
-}
-
-.img-sortinghat{
-    width: 150px;
 }
 
 
@@ -67,9 +66,8 @@ body {
     font-size: 10px;
   }
     .img-sortinghat{
-        width: 60%;
+        width: 40%;
     }
-  
 }
 
 .file-upload {
@@ -154,7 +152,7 @@ body {
 }
 
 .file-upload-image {
-  max-width: 70%;
+  max-width: 50%;
   margin: auto;
   padding: 20px;
 }
@@ -193,8 +191,9 @@ body {
 .chart-container{
     position: relative;
     margin: auto;
-    height:50vh; 
-    width:50vw
+    width: 60%;
+    /* height:50vh;  */
+    /* width:50vw */
 }
 
 .at-share-btn-elements {
