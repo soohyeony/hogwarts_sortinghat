@@ -10,6 +10,7 @@ body {
   font-family: 'DungGeunMo';
   background-color: #000000;
     text-align: center;
+    color: whitesmoke;
 }
 
 .bg-light:{
@@ -22,17 +23,22 @@ body {
 }
 
 .navbar-brand {
-    color: white;
+    color: whitesmoke;
 }
 
 .navbar-nav {
-    color: white;
+    color: whitesmoke;
+}
+
+.form-control.me-2 {
+    background-color: transparent;
+    color: whitesmoke;
 }
 
 .section {
     margin-top: 50px;
     text-align: center;
-    color: white;
+    color: whitesmoke;
 }
 
 .title {
@@ -55,15 +61,17 @@ body {
   html {
     font-size: 10px;
   }
+    .img-sortinghat{
+        width: 60%;
+    }
   
 }
 
 .file-upload {
   background-color: transparent;
   width: 80%;
-    height: 50vw;
   margin: 0 auto;
-  padding: 20px;
+  /* padding: 20px; */
     border-radius: 10px;
 
 }
@@ -172,4 +180,8 @@ body {
 .remove-image:active {
   border: 0;
   transition: all .2s ease;
+}
+
+.result-msg {
+    font-size: 1.5rem;
 }
