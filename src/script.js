@@ -199,10 +199,9 @@ async function predict() {
         }
     }
                 
-    
     Chart.defaults.font.family = 'DungGeunMo';
     Chart.defaults.font.size = 14;
-    Chart.defaults.plugins.legend.position = 'left';
+    Chart.defaults.plugins.legend.position = 'top';
     
     // 차트그리기
     var myChart = new Chart(
