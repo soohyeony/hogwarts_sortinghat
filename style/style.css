@@ -196,3 +196,7 @@ body {
     height: 50vh;
     width: 50vw;
 }
+
+.at-share-btn-elements {
+    padding-top: 20px;
+}
