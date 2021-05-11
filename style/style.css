@@ -152,7 +152,7 @@ body {
 }
 
 .file-upload-image {
-  max-width: 50%;
+  max-width: 60%;
   margin: auto;
   padding: 20px;
 }
@@ -198,4 +198,8 @@ body {
 
 .at-share-btn-elements {
     padding-top: 20px;
+}
+
+.remove-image {
+    font-size: 1.5rem;
 }
