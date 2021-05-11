@@ -25,7 +25,7 @@ function readURL(input) {
                 predict();
                 
             });
-        loadingMsg = "모자는 고민에 빠졌습니다..잠시만 기다려주세요."
+        loadingMsg = "모자는 고민에 빠졌습니다...잠시만 기다려주세요."
         $('.result-msg').html(loadingMsg);
     } else {
         removeUpload();
@@ -200,7 +200,7 @@ async function predict() {
     }
                 
     Chart.defaults.font.family = 'DungGeunMo';
-    Chart.defaults.font.size = 14;
+    Chart.defaults.font.size = 12;
     Chart.defaults.plugins.legend.position = 'top';
     
     // 차트그리기
