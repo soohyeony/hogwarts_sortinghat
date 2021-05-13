@@ -66,7 +66,11 @@ body {
     font-size: 10px;
   }
     .img-sortinghat{
-        width: 40%;
+        width: 30%;
+    }
+    .file-upload-image{
+        padding: 0;
+        max-width: 70%;
     }
 }
 
