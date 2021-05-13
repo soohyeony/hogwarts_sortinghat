@@ -201,7 +201,7 @@ async function predict() {
                 
     Chart.defaults.font.family = 'DungGeunMo';
     Chart.defaults.font.size = 12;
-    Chart.defaults.plugins.legend.position = 'top';
+    Chart.defaults.plugins.legend.position = 'right';
     
     // 차트그리기
     var myChart = new Chart(

@@ -76,6 +76,7 @@ body {
   margin: 0 auto;
   /* padding: 20px; */
     border-radius: 10px;
+    margin-bottom: 30px;
 
 }
 
@@ -202,4 +203,9 @@ body {
 
 .remove-image {
     font-size: 1.5rem;
+}
+
+.ad-banner{
+    width:320px;
+    margin: 0 auto;
 }
