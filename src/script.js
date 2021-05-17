@@ -1,3 +1,18 @@
+// nav - home
+function home_click(){
+    $('.about-container').hide();
+    $('.file-upload').show();
+}
+
+
+//about display
+function about_click(){
+    $('.file-upload').hide();
+    // $('.about-container').show();
+    // document.getElementsByClassName('about-container').style.display = "block";
+}
+
+
 //image uploads
 
 function readURL(input) {
@@ -25,8 +40,11 @@ function readURL(input) {
                 predict();
                 
             });
+        
         loadingMsg = "모자는 고민에 빠졌습니다...잠시만 기다려주세요."
         $('.result-msg').html(loadingMsg);
+        
+        
     } else {
         removeUpload();
     }
@@ -149,29 +167,29 @@ async function predict() {
           prediction[2].probability.toFixed(2)*100,
           prediction[3].probability.toFixed(2)*100],
         backgroundColor: [
-            "rgba(156,18,3,0.4)",
-            "rgba(227,160,0,0.4)",
-            "rgba(3,56,7,0.4)",
-            "rgba(0,22,94,0.4)"
+            "rgba(116, 0, 1,0.4)",
+            "rgba(26, 71, 42,0.4)",
+            "rgba(71,45,104,0.4)",
+            "rgba(93, 93, 93,0.4)"
         ],
         borderColor: [
-            "rgba(156,18,3,1)",
-            "rgba(227,160,0,1)",
-            "rgba(3,56,7,1)",
-            "rgba(0,22,94,1)"
+            "rgba(116, 0, 1,1)",
+            "rgba(26, 71, 42,1)",
+            "rgba(71,45,104,1)",
+            "rgba(93, 93, 93,1)"
         ],
         borderWidth: 2,
         hoverBackgroudColor: [
-            "rgba(156,18,3,0.6)",
-            "rgba(227,160,0,0.6)",
-            "rgba(3,56,7,0.6)",
-            "rgba(0,22,94,0.6)"
+            "rgba(116, 0, 1,0.6)",
+            "rgba(26, 71, 42,0.6)",
+            "rgba(71,45,104,0.6)",
+            "rgba(93, 93, 93,0.6)"
         ],
         hoverBorderColor: [
-            "rgba(156,18,3,1)",
-            "rgba(227,160,0,1)",
-            "rgba(3,56,7,1)",
-            "rgba(0,22,94,1)"
+            "rgba(116, 0, 1,1)",
+            "rgba(26, 71, 42,1)",
+            "rgba(71,45,104,1)",
+            "rgba(93, 93, 93,1)"
         ],
         hoverOffset: 0,
       }]
