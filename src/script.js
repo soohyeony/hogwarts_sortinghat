@@ -1,15 +1,15 @@
 // nav - home
 function home_click(){
-    $('.about-container').hide();
-    $('.file-upload').show();
+    // $('.about-container').hide();
+    // $('.file-upload').show();
+    // $('.about-container').hide();
+    document.getElementsByClassName('about-container').style.display = "block";
 }
 
 
 //about display
 function about_click(){
     $('.file-upload').hide();
-    // $('.about-container').show();
-    // document.getElementsByClassName('about-container').style.display = "block";
 }
 
 
