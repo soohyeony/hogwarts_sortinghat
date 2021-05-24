@@ -44,6 +44,10 @@ body {
     color: whitesmoke;
 }
 
+.ad-content{
+    height: 50px;
+}
+
 .section {
     margin-top: 30px;
     text-align: center;
@@ -54,7 +58,7 @@ body {
 
 .title {
     
-    font-size: 45px;
+    /* font-size: 45px; */
     line-height: 1.2;
     text-align: center;
     color: tan;
@@ -63,6 +67,7 @@ body {
 .img-sortinghat {
     filter: invert(80%);
     width: 150px;
+    margin-bottom: -40px;
 }
 
 
@@ -83,6 +88,7 @@ body {
         /* max-width: 70%; */
         width: 200px;
         height: 200px;
+        margin-bottom: -40px;
     }
 }
 
@@ -171,8 +177,8 @@ body {
 .file-upload-image {
     border: 10px solid #312e52;
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin-bottom: 20px;
     box-shadow: 5px 5px 10px black;
     object-fit: cover;
@@ -207,6 +213,15 @@ body {
 
 .result-msg {
     font-size: 1.5rem;
+}
+
+
+.fav-txt{
+    color: #4172b5;
+}
+
+.unfav-txt{
+    color: #b05f5f;
 }
 
 .chart-container{

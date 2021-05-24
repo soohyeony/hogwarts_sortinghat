@@ -41,7 +41,7 @@ function readURL(input) {
                 
             });
         
-        loadingMsg = "모자는 고민에 빠졌습니다...잠시만 기다려주세요."
+        loadingMsg = "모자는 고민에 빠졌습니다...<br>결과가 나올때까지 잠시만 기다려주세요."
         $('.result-msg').html(loadingMsg);
         
         
@@ -70,7 +70,7 @@ $('.image-upload-wrap').bind('dragleave', function () {
 // https://github.com/googlecreativelab/teachablemachine-community/tree/master/libraries/image
 
 // the link to your model provided by Teachable Machine export panel
-const URL = 'https://teachablemachine.withgoogle.com/models/whxHMzrv7/';
+const URL = 'https://teachablemachine.withgoogle.com/models/5of55d06K/';
 
 let model, webcam, labelContainer, maxPredictions;
 
@@ -124,19 +124,22 @@ async function predict() {
     switch (prediction[0].className) {
         case 'gryffindor':
             resultMsg =
-                '당신의 기숙사는 용기와 결의, 강인하면서도 숭고한 마음을 지닌 <b>그리핀도르</b>입니다.<br> 🏆 🍬 👊 🔥 🍀 <br>Welcome to Gryffindor!<br>Gryffindor values courage, bravery, nerve, and chivalry.';
+                '당신의 기숙사는 용기와 결의, 강인하면서도 숭고한 마음을 지닌 <b><span style="color:rgba(116, 0, 1,1)">그리핀도르</span></b>입니다.<br><br><span class="fav-txt">유리한 특성</span><br> 용감함, 기사도, 고귀함, 경쟁적, 대담함, 모험심, 다른 이를 위해 기꺼이 맞섬<br><span class="unfav-txt">불리한 특성</span><br> 충동적, 완고함, 격해지기 쉬움, 거만함, 무모함<br><br>🏆 🍬 👊 🔥 🍀<br>Welcome to Gryffindor!<br>Gryffindor values courage, bravery, nerve, and chivalry.<br><span class="fav-txt">Favorable Traits</span><br> Brave, Chivalrous, Noble, Competitive, Daring, Adventurous, Willing to Stand Up for Others<br><span class="unfav-txt">Unfavorable Traits</span><br>Impulsive, Stubborn, Hot-headed, Arrogant, Reckless';
             break;
         case 'hufflepuff':
             resultMsg =
-                '당신은 근면, 인내, 정의 및 충성심을 가치로 여기는 <b>후플푸프</b> 학생입니다.<br> 🌻 🍽 ☕ ❤︎ 🌱 <br>Welcome to Hufflepuff!<br>Hufflepuff values hard work, patience, justice, and loyalty.';
+                '당신은 근면, 인내, 정의 및 충성심을 가치로 여기는 <b><span style="color:rgba(148, 107, 45,1)">후플푸프</span></b> 학생입니다.<br><br><span class="fav-txt">유리한 특성</span><br> 근면함, 헌신적, 공정함, 인내심, 충성, 친절, 겸손, 정직<br><span class="unfav-txt">불리한 특성</span><br> 귀가 얇음, 멍함, 순진, 줏대가 없음, 쉽게 이용당함<br><br>🌻 🍽 ☕ ❤︎ 🌱<br>Welcome to Hufflepuff!<br>Hufflepuff values hard work, patience, justice, and loyalty.<br><span class="fav-txt">Favorable Traits</span><br>Hard-working, Dedicated, Fair, Patient, Loyal, Kind, Humble, Honest<br><span class="unfav-txt">Unfavorable Traits</span><br>Too Trusting, Absent-minded, Naive, Spineless, Easy Taken Advantage Of';
             break;
         case 'ravenclaw':
             resultMsg =
-                '당신은 지능, 학습, 지혜 및 재치를 가치있게 생각하는 <b>레번클로</b> 학생입니다.<br> 🦅 🌙 📖 ✨ 🎨 <br>Welcome to Ravenclaw!<br>Ravenclaw values intelligence, learning, wisdom and wit.';
+                '당신은 지능, 학습, 지혜 및 재치를 가치있게 생각하는 <b><span style="color:#4172b5">레번클로</span></b> 학생입니다.<br><br><span class="fav-txt">유리한 특성</span><br> 현명함, 지능적, 창의적, 영리함, 지식이 많음, 기발함<br><span class="unfav-txt">불리한 특성</span><br> 잘난척, 헛된 노력, 대립, 무시를 잘함, 지나친 자부심<br><br>🦅 🌙 📖 ✨ 🎨<br>Welcome to Ravenclaw!<br>Ravenclaw values intelligence, learning, wisdom and wit.<br><span class="fav-txt">Favorable Traits</span><br>Wise, Intelligent, Creative, Clever, Knowledgeable, Quirky<br><span class="unfav-txt">Unfavorable Traits</span><br>Know-it-all, Vain, Standoffish, Dismissive, Overly Proud';
             break;
         case 'slytherin':
             resultMsg =
-                '당신의 기숙사는 목적을 달성하기 위해선 수단과 방법을 가리지 않을 야심가들과 재간꾼들을 위한 기숙사인 <b>슬리데린</b>입니다.<br>🐍 🌲 🌠 🌩 🍷 <br>Welcome to Slytherin!<br>Slytherin values ambition, cunning, leadership, and resourcefulness.';
+                '당신의 기숙사는 목적을 달성하기 위해선 수단과 방법을 가리지 않을 야심가들과 재간꾼들을 위한 기숙사인 <b><span style="color:rgba(26, 71, 42,1)">슬리데린</span></b>입니다.<br><br><span class="fav-txt">유리한 특성</span><br> 교활함, 영리함, 야심적, 자부심, 수완, 단호함<br><span class="unfav-txt">불리한 특성</span><br> 교활함, 무자비함, 이기적, 조작적<br><br>🐍 🌲 🌠 🌩 🍷<br>Welcome to Slytherin!<br>Slytherin values ambition, cunning, leadership, and resourcefulness.<br><span class="fav-txt">Favorable Traits</span><br>Sly, Clever, Ambitious, Prideful, Resourceful, Determined<br><span class="unfav-txt">Unfavorable Traits</span><br>Cunning, Ruthless, Selfish, Entitled, Manipulative';
+            break;
+        case 'muggle':
+            resultMsg = '당신은 마법을 사용할 수 없는 <span style="color:rgba(93, 93, 93,1)">머글</span>입니다. 안타깝지만 호그와트에 입학할 수 없습니다.<br>😥😩😭<br>Sorry, You are a muggle who cannot be admitted to Hogwarts, school for witches and wizards.';
             break;
         default:
             resultMsg = '기숙사 배정 불가(No Result)';
@@ -159,7 +162,9 @@ async function predict() {
           prediction[0].className,
           prediction[1].className,
           prediction[2].className,
-          prediction[3].className
+          prediction[3].className,
+          prediction[4].className
+          
       ],
       datasets: [{
         label: 'RESULT',
@@ -167,17 +172,21 @@ async function predict() {
           prediction[0].probability.toFixed(2)*100,
           prediction[1].probability.toFixed(2)*100,
           prediction[2].probability.toFixed(2)*100,
-          prediction[3].probability.toFixed(2)*100],
+          prediction[3].probability.toFixed(2)*100,
+          prediction[4].probability.toFixed(2)*100
+        ],
         backgroundColor: [
             "rgba(116, 0, 1,0.4)",
             "rgba(26, 71, 42,0.4)",
             "rgba(71,45,104,0.4)",
+            "rgba(148, 107, 45, 0.4)",
             "rgba(93, 93, 93,0.4)"
         ],
         borderColor: [
             "rgba(116, 0, 1,1)",
             "rgba(26, 71, 42,1)",
             "rgba(71,45,104,1)",
+            "rgba(148, 107, 45, 1)",
             "rgba(93, 93, 93,1)"
         ],
         borderWidth: 2,
@@ -185,12 +194,14 @@ async function predict() {
             "rgba(116, 0, 1,0.6)",
             "rgba(26, 71, 42,0.6)",
             "rgba(71,45,104,0.6)",
+            "rgba(148, 107, 45, 0.4)",
             "rgba(93, 93, 93,0.6)"
         ],
         hoverBorderColor: [
             "rgba(116, 0, 1,1)",
             "rgba(26, 71, 42,1)",
             "rgba(71,45,104,1)",
+            "rgba(148, 107, 45, 1)",
             "rgba(93, 93, 93,1)"
         ],
         hoverOffset: 0,
