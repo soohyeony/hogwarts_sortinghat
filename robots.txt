@@ -1,3 +1,3 @@
-User-Agent:*
-Allow: / 
-Sitemap: https://nifty-wing-6be9a9.netlify.app/sitemap.xml
+User-agent: *
+Allow:/
+Sitemap: https://https://hogwarts-sortinghat.netlify.app/sitemap.xml
