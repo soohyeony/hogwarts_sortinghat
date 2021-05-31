@@ -44,9 +44,9 @@ body {
     color: whitesmoke;
 }
 
-.ad-content{
+/* .ad-content{
     height: 50px;
-}
+} */
 
 .section {
     margin-top: 30px;
@@ -58,7 +58,7 @@ body {
 
 .title {
     
-    /* font-size: 45px; */
+    font-size: 2.3rem;
     line-height: 1.2;
     text-align: center;
     color: tan;
@@ -75,6 +75,9 @@ body {
     font-size: 5rem;
 }
 
+#about {
+    padding: 25px;
+}
 
 @media screen and (max-width: 600px) {
   html {
@@ -215,6 +218,10 @@ body {
     font-size: 1.5rem;
 }
 
+.house-txt{
+    font-size:2rem;
+}
+
 
 .fav-txt{
     color: #4172b5;
@@ -241,6 +248,7 @@ body {
 }
 
 .ad-banner{
-    width: 100%
+    padding-top: 100px;
+    width: 100%;
     margin: 0 auto;
 }
